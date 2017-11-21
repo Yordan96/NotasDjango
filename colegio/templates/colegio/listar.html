@@ -1,25 +1,28 @@
 
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-<table>
-  <thead>
-    <tr>
-      <th>Grado</th>
-      <th>Materias</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for grado in grados %}
-    <tr>
+
+   <div class="container">
+     <table class="table">
+       <thead>
+         <tr>
+           <th>Grado</th>
+           <th>Materias</th>
+         </tr>
+       </thead>
+       <tbody>
+         {% for grado in grados %}
+         <tr>
 
 
-    <td>{{ grado.nombre}}</td>
-      {% for r in grado.materias.all %}
-<td>
-    -  {{ r.nombre }}
-</td>
-    {% endfor %}
-    </tr>
-  {% endfor %}
-  </tbody>
-</table>
+         <td>{{ grado.nombre}}</td>
+           {% for r in grado.materias.all %}
+     <td>
+         -  {{ r.nombre }}
+     </td>
+         {% endfor %}
+         </tr>
+       {% endfor %}
+       </tbody>
+     </table>
+   </div>
