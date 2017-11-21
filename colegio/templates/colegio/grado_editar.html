@@ -1,0 +1,12 @@
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+   <div class="page-header">
+       <h1><a href="/">Nuevo Grado</a></h1>
+   </div>
+   <div class="container">
+     <form method="POST" class="post-form">{% csrf_token %}
+         {{ formulario.as_p }}
+         <button type="submit" class="save btn btn-default">Guardar</button>
+     </form>
+   </div>
